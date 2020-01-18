@@ -6,6 +6,10 @@ public class MapDisplay : MonoBehaviour {
 	public Renderer textureRender;
 	public MeshFilter meshFilter;
 	public MeshRenderer meshRenderer;
+	
+	void Start() {
+		
+	}
 
 	public void DrawTexture(Texture2D texture) {
 		textureRender.sharedMaterial.mainTexture = texture;

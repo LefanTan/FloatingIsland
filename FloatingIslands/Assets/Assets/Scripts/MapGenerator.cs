@@ -3,6 +3,10 @@ using System.Collections;
 
 public class MapGenerator : MonoBehaviour {
 
+	public void Start(){
+		GenerateMap();
+	}
+
 	public enum DrawMode {
 		Noise,
 		Color,
