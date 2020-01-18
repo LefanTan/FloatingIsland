@@ -4,6 +4,10 @@ using System.Collections;
 public class MapDisplay : MonoBehaviour {
 
 	public Renderer textureRender;
+	
+	void Start() {
+		
+	}
 
 	public void DrawTexture(Texture2D texture) {
 		textureRender.sharedMaterial.mainTexture = texture;
