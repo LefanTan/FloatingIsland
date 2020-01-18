@@ -433,17 +433,95 @@ MonoBehaviour:
   drawMode: 1
   mapWidth: 100
   mapHeight: 100
-  noiseScale: 8.76
-  octaves: 4
-  persistance: 2.17
-  lucanarity: 0.9
+  noiseScale: 8.92
+  octaves: 8
+  persistance: 0.22
+  lacunarity: 3.4
+  seed: 26
+  normMultiplier: 5
+  offset: {x: 6.63, y: -2.25}
+  xNoiseCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.24360728
+      value: 1.0521747
+      inSlope: -0.15197305
+      outSlope: -0.15197305
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.39036715
+      value: 0.95582765
+      inSlope: -0.037729852
+      outSlope: -0.037729852
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.7903061
+      value: 0.9864283
+      inSlope: 0.18835634
+      outSlope: 0.18835634
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.99572754
+      value: 1.0480957
+      inSlope: 0.30019933
+      outSlope: 0.30019933
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  yNoiseCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -1.0044504
+      value: 1.0493087
+      inSlope: -0.10806112
+      outSlope: -0.10806112
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: -0.11226374
+      value: 0.95289797
+      inSlope: -0.008547552
+      outSlope: -0.008547552
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.95648193
+      value: 1.0501175
+      inSlope: 0.090966016
+      outSlope: 0.090966016
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   autoUpdate: 1
   regions:
   - name: Water
-    height: 0.4
+    height: 0.57
     color: {r: 0.083591655, g: 0.071110725, b: 0.8867924, a: 0}
   - name: Sand
-    height: 0.5
+    height: 0.62
     color: {r: 0.8396226, g: 0.8148581, b: 0.47921857, a: 1}
   - name: Grass
     height: 0.7

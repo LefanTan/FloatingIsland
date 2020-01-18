@@ -3,7 +3,7 @@ using System.Collections;
 
 public static class Noise {
 
-	public static float[,] GenerateNoiseMap(int mapWidth, int mapHeight, int seed, float scale, int octaves, float persistance, float lacunarity, Vector2 offset) {
+	public static float[,] GenerateNoiseMap(int mapWidth, int mapHeight, int seed, float scale, int octaves, float persistance, float lacunarity, Vector2 offset, AnimationCurve xCurve, AnimationCurve yCurve, float normMultiplier) {
 		float[,] noiseMap = new float[mapWidth,mapHeight];
 
 		System.Random rng = new System.Random(seed);
@@ -37,7 +37,8 @@ public static class Noise {
 					float sampleY = (y - halfHeight) / scale * frequency +octaveOffsets[i].y;
 
 					float perlinValue = Mathf.PerlinNoise (sampleX, sampleY) * 2 - 1;
-					noiseHeight += perlinValue * amplitude;
+					noiseHeight += perlinValue * amplitude - GetNormalized(xCurve, yCurve, x, y, mapWidth, mapHeight) * normMultiplier;
+					//noiseHeight += perlinValue * amplitude - Distance_SquareRt(x, y, mapWidth, mapHeight);
 
 					amplitude *= persistance;
 					frequency *= lacunarity;
@@ -59,6 +60,23 @@ public static class Noise {
 		}
 
 		return noiseMap;
+	}
+
+	private static float GetNormalized(AnimationCurve xCurve, AnimationCurve yCurve, int x, int y, int width, int height){
+
+		float dx =  2f * (float)x/ (float)width - 1f;
+		float dy = 2f * (float)y / (float)height -1f;
+
+	//	Debug.Log(dx + "  " + dy);
+		return (xCurve.Evaluate(dx) +  yCurve.Evaluate(dy)) / 2f;
+	}
+
+	private static float Distance_SquareRt (float x, float y, int width, int height){
+
+		float dx =  2 * x / width - 1;
+		float dy = 2 * y / height - 1;
+
+		return Mathf.Sqrt( dx * dx + dy*dy);
 	}
 
 }
