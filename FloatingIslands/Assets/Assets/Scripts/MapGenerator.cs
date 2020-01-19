@@ -35,6 +35,8 @@ public class MapGenerator : MonoBehaviour {
 	public bool autoUpdate;
 	public TerrainType[] regions;
 
+	public MeshGenerator meshGenerator = new MeshGenerator();
+
 	public void GenerateMap() {
 		Color[] colorMap = new Color[mapChunkSize * mapChunkSize];
 		float[,] heightMap = Noise.GenerateNoiseMap (mapChunkSize, mapChunkSize, seed, noiseScale, octaves, persistance, lacunarity, offset, xNoiseCurve, yNoiseCurve, normMultiplier);
@@ -58,8 +60,8 @@ public class MapGenerator : MonoBehaviour {
 			MapDisplay display = FindObjectOfType<MapDisplay>();
 			display.DrawTexture(TextureGenerator.TextureFromColorMap(colorMap, mapChunkSize, mapChunkSize));
 		} else if (drawMode == DrawMode.Mesh){
-			MapDisplay display = FindObjectOfType<MapDisplay>();
-			display.DrawMesh(MeshGenerator.GenerateTerrainMesh(heightMap, meshHeightMultiplier, meshHeightCurve, levelOfDetail), TextureGenerator.TextureFromColorMap(colorMap, mapChunkSize, mapChunkSize));
+			MapDisplay display = this.gameObject.GetComponent<MapDisplay>();
+			display.DrawMesh(meshGenerator.GenerateTerrainMesh(heightMap, meshHeightMultiplier, meshHeightCurve, levelOfDetail), TextureGenerator.TextureFromColorMap(colorMap, mapChunkSize, mapChunkSize));
 		}
 
 		

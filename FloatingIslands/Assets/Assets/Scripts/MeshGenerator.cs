@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class MeshGenerator
+public class MeshGenerator
 {
 
-    public static MeshData GenerateTerrainMesh(float[,] heightMap, float heightMultiplier, AnimationCurve heightCurve, int levelOfDetail) {
+    public MeshData GenerateTerrainMesh(float[,] heightMap, float heightMultiplier, AnimationCurve heightCurve, int levelOfDetail) {
         int width = heightMap.GetLength(0);
         int height = heightMap.GetLength(1);
         float topLeftX = (width - 1) / -2f;
@@ -34,7 +34,6 @@ public static class MeshGenerator
                         meshData.AddTrianlge(vertexIndex, vertexIndex + verticesPerLine + 1, vertexIndex + verticesPerLine);
                     }
                     if (meshData.vertices[vertexIndex].y > 0f || meshData.vertices[vertexIndex + verticesPerLine + 1].y > 0f || meshData.vertices[vertexIndex + 1].y > 0f) {
-                        Debug.Log("2");
                         meshData.AddTrianlge(vertexIndex,vertexIndex + 1, vertexIndex + verticesPerLine + 1);
                     }
                 }

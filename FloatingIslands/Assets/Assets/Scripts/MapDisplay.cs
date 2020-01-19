@@ -23,7 +23,7 @@ public class MapDisplay : MonoBehaviour {
 		Mesh mesh = meshData.CreateMesh();
 		meshFilter.sharedMesh = mesh;
 		meshRenderer.sharedMaterial.mainTexture = texture;
-		bottomFilter.sharedMesh = mesh;
+		bottomFilter.sharedMesh = meshData.CreateMesh();
 		bottomRenderer.sharedMaterial.mainTexture = texture;
 		bottomRenderer.transform.localScale = new Vector3(1,-1,1);
 		
