@@ -27,7 +27,6 @@ public class MapDisplay : MonoBehaviour {
 		bottomFilter.sharedMesh = meshData.CreateMesh();
 		bottomRenderer.sharedMaterial.mainTexture = bottomTexture;
 		bottomRenderer.transform.localScale = new Vector3(1,-1,1);
-		
 	}
 	
 }
