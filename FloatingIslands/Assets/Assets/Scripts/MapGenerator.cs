@@ -24,9 +24,9 @@ public class MapGenerator : MonoBehaviour {
 	public AnimationCurve xNoiseCurve;
 	public AnimationCurve yNoiseCurve;
 
-	[Range(0,6)]
+	[Range(0,3)]
     public int levelOfDetail;
-	const int mapChunkSize = 241;
+	const int mapChunkSize = 121;
 
 
 	public float meshHeightMultiplier;
