@@ -813,44 +813,87 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43fee917d01e7b84a85ad1d0e3099fd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  drawMode: 2
-  noiseScale: 19.7
+  drawMode: 1
+  mapWidth: 100
+  mapHeight: 100
+  noiseScale: 8.92
   octaves: 8
   persistance: 0.22
-  lacunarity: 1
-  seed: 121
-  offset: {x: -5.09, y: 3.78}
-  levelOfDetail: 3
-  meshHeightMultiplier: 40.5
-  meshHeightCurve:
+  lacunarity: 3.4
+  seed: 26
+  normMultiplier: 5
+  offset: {x: 6.63, y: -2.25}
+  xNoiseCurve:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0.0021985564
-      value: -0.010517061
-      inSlope: 0.047898952
-      outSlope: 0.047898952
-      tangentMode: 0
+      time: -0.24360728
+      value: 1.0521747
+      inSlope: -0.15197305
+      outSlope: -0.15197305
+      tangentMode: 34
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.47209024
+      outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.578457
-      value: 0.13168934
-      inSlope: 0.77950263
-      outSlope: 0.77950263
-      tangentMode: 0
+      time: 0.39036715
+      value: 0.95582765
+      inSlope: -0.037729852
+      outSlope: -0.037729852
+      tangentMode: 34
       weightedMode: 0
-      inWeight: 0.113440946
-      outWeight: 0.19627525
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     - serializedVersion: 3
-      time: 1.0426941
-      value: 0.66574633
-      inSlope: 3.6543186
-      outSlope: 3.6543186
-      tangentMode: 0
+      time: 0.7903061
+      value: 0.9864283
+      inSlope: 0.18835634
+      outSlope: 0.18835634
+      tangentMode: 34
       weightedMode: 0
-      inWeight: 0.052543163
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.99572754
+      value: 1.0480957
+      inSlope: 0.30019933
+      outSlope: 0.30019933
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  yNoiseCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -1.0044504
+      value: 1.0493087
+      inSlope: -0.10806112
+      outSlope: -0.10806112
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: -0.11226374
+      value: 0.95289797
+      inSlope: -0.008547552
+      outSlope: -0.008547552
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.95648193
+      value: 1.0501175
+      inSlope: 0.090966016
+      outSlope: 0.090966016
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2

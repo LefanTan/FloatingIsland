@@ -19,7 +19,10 @@ public class MapGenerator : MonoBehaviour {
 	public float persistance; //affects amptitude so that amptitude decreases with octaves
 	public float lacunarity; //affects frequency so that frequency increases with octaves 
 	public int seed;
+	public float normMultiplier;
 	public Vector2 offset;
+	public AnimationCurve xNoiseCurve;
+	public AnimationCurve yNoiseCurve;
 
 	[Range(0,6)]
     public int levelOfDetail;
@@ -33,8 +36,8 @@ public class MapGenerator : MonoBehaviour {
 	public TerrainType[] regions;
 
 	public void GenerateMap() {
-		float[,] heightMap = Noise.GenerateNoiseMap (mapChunkSize, mapChunkSize, seed, noiseScale, octaves, persistance, lacunarity, offset);
 		Color[] colorMap = new Color[mapChunkSize * mapChunkSize];
+		float[,] heightMap = Noise.GenerateNoiseMap (mapChunkSize, mapChunkSize, seed, noiseScale, octaves, persistance, lacunarity, offset, xNoiseCurve, yNoiseCurve, normMultiplier);
 
 		for (int y = 0; y < mapChunkSize; y++){
 			for (int x = 0; x < mapChunkSize; x ++){
