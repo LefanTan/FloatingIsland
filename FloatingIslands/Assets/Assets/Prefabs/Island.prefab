@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1839826340}
   m_Layer: 0
   m_Name: IslandGenerator
-  m_TagString: Untagged
+  m_TagString: Island
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -303,7 +303,7 @@ GameObject:
   - component: {fileID: 183698137730545524}
   m_Layer: 0
   m_Name: Island
-  m_TagString: Untagged
+  m_TagString: Walls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

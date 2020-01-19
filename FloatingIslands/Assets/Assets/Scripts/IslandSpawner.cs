@@ -11,7 +11,7 @@ public class IslandSpawner : MonoBehaviour
     public GameObject islandPrefab;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         GameObject[] islands = new GameObject[islandCount];
         for (int i = 0; i < islandCount; i++){

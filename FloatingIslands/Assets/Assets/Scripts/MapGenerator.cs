@@ -71,7 +71,7 @@ public class MapGenerator : MonoBehaviour {
 
 		
 	}
-	
+		
 	void OnValidate(){
 		if(octaves < 0){
 			octaves = 0;
@@ -80,7 +80,6 @@ public class MapGenerator : MonoBehaviour {
 			lacunarity = 1;
 		}
 	}
-
 }
 
 [System.Serializable]
