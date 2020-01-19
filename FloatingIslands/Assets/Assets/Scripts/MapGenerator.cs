@@ -39,12 +39,15 @@ public class MapGenerator : MonoBehaviour {
 
 	public void GenerateMap() {
 		Color[] colorMap = new Color[mapChunkSize * mapChunkSize];
+		Color[] bottomMap = new Color[mapChunkSize * mapChunkSize];
+
 		float noiseRandom = Random.Range(10f, 16f);
 		float seedRandom = Random.Range(1, 1000000);
 		float[,] heightMap = Noise.GenerateNoiseMap (mapChunkSize, mapChunkSize, (int)seedRandom, noiseRandom, octaves, persistance, lacunarity, offset, xNoiseCurve, yNoiseCurve, normMultiplier);
 
 		for (int y = 0; y < mapChunkSize; y++){
 			for (int x = 0; x < mapChunkSize; x ++){
+				bottomMap[y * mapChunkSize + x] = regions[regions.GetLength(0) - 1].color;
 				float currentHeight = heightMap[x, y];
 				for (int i = 0; i < regions.Length; i ++) {
 					if (currentHeight < regions[i].height){
@@ -63,7 +66,7 @@ public class MapGenerator : MonoBehaviour {
 			display.DrawTexture(TextureGenerator.TextureFromColorMap(colorMap, mapChunkSize, mapChunkSize));
 		} else if (drawMode == DrawMode.Mesh){
 			MapDisplay display = this.gameObject.GetComponent<MapDisplay>();
-			display.DrawMesh(meshGenerator.GenerateTerrainMesh(heightMap, meshHeightMultiplier, meshHeightCurve, levelOfDetail), TextureGenerator.TextureFromColorMap(colorMap, mapChunkSize, mapChunkSize));
+			display.DrawMesh(meshGenerator.GenerateTerrainMesh(heightMap, meshHeightMultiplier, meshHeightCurve, levelOfDetail), TextureGenerator.TextureFromColorMap(colorMap, mapChunkSize, mapChunkSize), TextureGenerator.TextureFromColorMap(bottomMap, mapChunkSize, mapChunkSize));
 		}
 
 		
