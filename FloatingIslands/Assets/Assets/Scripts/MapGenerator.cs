@@ -47,7 +47,7 @@ public class MapGenerator : MonoBehaviour {
 
 		
 	}
-	
+		
 	void OnValidate(){
 		if(mapWidth < 1){
 			mapWidth = 1;
@@ -61,6 +61,10 @@ public class MapGenerator : MonoBehaviour {
 		if(lacunarity < 1 ){
 			lacunarity = 1;
 		}
+	}
+
+	void Start() {
+		GenerateMap();
 	}
 
 }
