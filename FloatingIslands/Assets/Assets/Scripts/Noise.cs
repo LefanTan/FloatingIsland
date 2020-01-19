@@ -68,7 +68,9 @@ public static class Noise {
 		float dy = 2f * (float)y / (float)height -1f;
 
 	//	Debug.Log(dx + "  " + dy);
-		return (xCurve.Evaluate(dx) +  yCurve.Evaluate(dy)) / 2f;
+		float xEva = xCurve.Evaluate(dx);
+		float yEva = yCurve.Evaluate(dy);
+		return Mathf.Sqrt(xEva * xEva + yEva * yEva);
 	}
 
 	private static float Distance_SquareRt (float x, float y, int width, int height){
