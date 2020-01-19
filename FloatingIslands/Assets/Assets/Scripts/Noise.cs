@@ -38,7 +38,6 @@ public static class Noise {
 
 					float perlinValue = Mathf.PerlinNoise (sampleX, sampleY) * 2 - 1;
 					noiseHeight += perlinValue * amplitude - GetNormalized(xCurve, yCurve, x, y, mapWidth, mapHeight) * normMultiplier;
-					//noiseHeight += perlinValue * amplitude - Distance_SquareRt(x, y, mapWidth, mapHeight);
 
 					amplitude *= persistance;
 					frequency *= lacunarity;
