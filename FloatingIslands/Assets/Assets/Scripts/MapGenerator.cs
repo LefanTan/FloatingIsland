@@ -39,7 +39,9 @@ public class MapGenerator : MonoBehaviour {
 
 	public void GenerateMap() {
 		Color[] colorMap = new Color[mapChunkSize * mapChunkSize];
-		float[,] heightMap = Noise.GenerateNoiseMap (mapChunkSize, mapChunkSize, seed, noiseScale, octaves, persistance, lacunarity, offset, xNoiseCurve, yNoiseCurve, normMultiplier);
+		float noiseRandom = Random.Range(10f, 16f);
+		float seedRandom = Random.Range(1, 1000000);
+		float[,] heightMap = Noise.GenerateNoiseMap (mapChunkSize, mapChunkSize, (int)seedRandom, noiseRandom, octaves, persistance, lacunarity, offset, xNoiseCurve, yNoiseCurve, normMultiplier);
 
 		for (int y = 0; y < mapChunkSize; y++){
 			for (int x = 0; x < mapChunkSize; x ++){

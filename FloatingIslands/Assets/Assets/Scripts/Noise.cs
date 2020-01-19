@@ -24,6 +24,10 @@ public static class Noise {
 
 		float halfWidth = mapWidth / 2f;
 		float halfHeight = mapHeight / 2f;
+		float randomMultiplier = Random.Range(0.45f, 1.1f);
+
+		yCurve.RemoveKey(0);
+		yCurve.AddKey(Random.Range(0.75f,-1.4f) ,1f);
 
 		for (int y = 0; y < mapHeight; y++) {
 			for (int x = 0; x < mapWidth; x++) {
@@ -37,7 +41,8 @@ public static class Noise {
 					float sampleY = (y - halfHeight) / scale * frequency +octaveOffsets[i].y;
 
 					float perlinValue = Mathf.PerlinNoise (sampleX, sampleY) * 2 - 1;
-					noiseHeight += perlinValue * amplitude - GetNormalized(xCurve, yCurve, x, y, mapWidth, mapHeight) * normMultiplier;
+					
+					noiseHeight += perlinValue * amplitude - GetNormalized(xCurve, yCurve, x, y, mapWidth, mapHeight) * randomMultiplier;
 
 					amplitude *= persistance;
 					frequency *= lacunarity;

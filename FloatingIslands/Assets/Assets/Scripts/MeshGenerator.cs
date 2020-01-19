@@ -40,6 +40,21 @@ public class MeshGenerator
                 vertexIndex ++;
             }
         }
+        // vertexIndex = 0;
+        // for (int y = 0; y < height; y += meshSimplificationIncrement){
+        //     for (int x = 0; x < width; x += meshSimplificationIncrement){
+        //         if (x < width -1 && y < height - 1){
+        //             if (meshData.vertices[vertexIndex].y > 0f || meshData.vertices[vertexIndex + verticesPerLine + 1].y > 0f || meshData.vertices[vertexIndex + verticesPerLine].y > 0f) {
+        //                 meshData.AddTrianlge(vertexIndex, vertexIndex + verticesPerLine + 1, vertexIndex + verticesPerLine);
+        //             }
+        //             if (meshData.vertices[vertexIndex].y > 0f || meshData.vertices[vertexIndex + verticesPerLine + 1].y > 0f || meshData.vertices[vertexIndex + 1].y > 0f) {
+        //                 //Debug.Log("2");
+        //                 meshData.AddTrianlge(vertexIndex,vertexIndex + 1, vertexIndex + verticesPerLine + 1);
+        //             }
+        //         }
+        //         vertexIndex ++;
+        //     }
+        // }
 
         // // Mirror to Bottom
         // for (int y = 0; y < height; y += meshSimplificationIncrement){
