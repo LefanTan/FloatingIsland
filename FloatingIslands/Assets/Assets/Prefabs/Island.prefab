@@ -89,10 +89,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0.018614352
+      time: -0.9074361
       value: 1
-      inSlope: -1.6618693
-      outSlope: -1.6618693
+      inSlope: -0.56840944
+      outSlope: -0.56840944
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
@@ -100,8 +100,8 @@ MonoBehaviour:
     - serializedVersion: 3
       time: 0.5
       value: 0.2
-      inSlope: -0.08469689
-      outSlope: -0.08469689
+      inSlope: 0.46203303
+      outSlope: 0.46203303
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
@@ -118,7 +118,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  levelOfDetail: 0
+  levelOfDetail: 1
   meshHeightMultiplier: 16.5
   meshHeightCurve:
     serializedVersion: 2
@@ -165,20 +165,20 @@ MonoBehaviour:
   autoUpdate: 1
   regions:
   - name: 1
-    height: 0.45
-    color: {r: 0.18849905, g: 0.18325028, b: 0.5471698, a: 0}
-  - name: 2
     height: 0.55
-    color: {r: 0.26851478, g: 0.26312745, b: 0.764151, a: 1}
+    color: {r: 0.2264151, g: 0.21154377, b: 0.18262728, a: 0}
+  - name: 2
+    height: 0.62
+    color: {r: 0.16981131, g: 0.15542978, b: 0.106532566, a: 1}
   - name: 3
     height: 0.65
-    color: {r: 0.37501043, g: 0.37068352, b: 0.9245283, a: 1}
+    color: {r: 0.2735849, g: 0.24745238, b: 0.16905482, a: 1}
   - name: 4
     height: 0.7
-    color: {r: 0.8962264, g: 0.86598366, b: 0.5030705, a: 1}
+    color: {r: 0.5237141, g: 0.6509434, b: 0.35924706, a: 1}
   - name: 5
     height: 0.75
-    color: {r: 0.67891484, g: 0.77254903, b: 0.4117647, a: 1}
+    color: {r: 0.5526622, g: 0.735849, b: 0.31585974, a: 1}
   - name: 6
     height: 0.8
     color: {r: 0.46253693, g: 0.6226415, b: 0.255518, a: 1}
@@ -194,6 +194,9 @@ MonoBehaviour:
   - name: 10
     height: 1
     color: {r: 1, g: 1, b: 1, a: 1}
+  - name: Bottom
+    height: 1
+    color: {r: 0.16037738, g: 0.14457199, b: 0.12633501, a: 1}
 --- !u!114 &1839826340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,7 +271,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7ebc0140266d32d4fa99d8ac8935bd42, type: 2}
+  - {fileID: 2100000, guid: 058f1ffa2a4cd4e4f88ba189851ea485, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
