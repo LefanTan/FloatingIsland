@@ -27,7 +27,7 @@ public static class Noise {
 		float randomMultiplier = Random.Range(0.45f, 1.1f);
 
 		yCurve.RemoveKey(0);
-		yCurve.AddKey(Random.Range(0.75f,-1.4f) ,1f);
+		yCurve.AddKey(Random.Range(0.4f,-1.4f) ,1f);
 
 		for (int y = 0; y < mapHeight; y++) {
 			for (int x = 0; x < mapWidth; x++) {
